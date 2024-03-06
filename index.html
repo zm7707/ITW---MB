@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body class="w-screen h-screen bg-white">
+<body class="w-screen h-screen bg-white overflow-x-hidden">
 
     <!-- MY CODE STARTS HERE-->
 
@@ -20,49 +20,53 @@
         <div class="h-full w-2/5 absolute top-0 right-28 text-lg flex justify-evenly items-center">
             <a href="">Overview</a>
             <a href="">Residences</a>
-            <a href="">Location</a>
+            <a href="#location">Location</a>
             <a href="">Floor Plans</a>
         </div>
     </header>
-    <div class="w-screen h-screen bg-cover bg-left-top bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/home-bg.png')]">
+
+    <main>
+    <section class="w-screen h-screen bg-cover bg-bottom bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/home-bg.png')]">
         <div class="w-1/2 h-full text-white grid content-center gap-10 justify-items-center">
-            <p class="font-[Cardo] font-thin text-6xl">Discover Living <br> in Sensual Purity</p>
-            <p class="font-extralight text-2xl -translate-x-2">New grounds for extraordinary moments</p>
-            <button class="w-56 h-12 bg-black text-white rounded-md -translate-x-24">Register your interest</button>
+            <p class="font-[Cardo] font-thin text-6xl">Discover Living <br> in Sensual <br> Purity</p>
+            <p class="font-extralight text-2xl">New grounds for extraordinary moments</p>
+            <button class="w-56 h-12 bg-black text-white rounded-md place-self-start ml-40">Register your interest</button>
+            <div id="location" class="w-2 h-2 absolute bottom-24"></div> <!--Used to get anchor scrolling matched with the actual location section-->
         </div>
-    </div>
-    <div class="w-screen h-3/6 grid grid-rows-2 justify-items-center place-items-center">
+    </section>
+    <section class="w-screen h-3/6 grid grid-rows-2 justify-items-center place-items-center">
         <p class="font-[Cardo] text-5xl">Strategically Located</p>
         <p class="text-center font-extralight text-xl   ">Surrounded by Dubai’s most eminent landmarks, Mercedes-Benz Places <br> 
             offers unobstructed views of the world’s tallest tower, creating an <br> 
             unparalleled living experience.</p>
-    </div>
-    <div class="w-screen h-screen bg-cover bg-[url('https://manage.tanamiproperties.com/Project/LayoutPlan/1497/Gallery/1527.webp')]"></div>
-    <div class="w-screen h-3/5 bg-white grid grid-rows-2 justify-items-center place-items-center">
+    </section>
+    <section class="w-screen h-screen bg-cover bg-[url('https://manage.tanamiproperties.com/Project/LayoutPlan/1497/Gallery/1527.webp')]"></section>
+    <section class="w-screen h-3/5 bg-white grid grid-rows-2 justify-items-center place-items-center">
         <p class="font-[Cardo] text-5xl text-black font-thin text-center">Breaking New Grounds for <br> 
             Intelligent and Luxury Living</p>
             <p class="font-extralight text-xl text-center">The blend of design artistry with the precision of advanced technology <br> 
                 creates a harmonious environment where unparalleled customer-centered <br>
                  experience harmonizes with continuous innovation.</p>
-    </div>
-    <div class="w-screen h-4/5 bg-white overflow-y-auto flex">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-1.png" alt="">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-2.png" alt="">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-3.png" alt="">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-4.png" alt="">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-5.png" alt="">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-6.png" alt="">
-        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-8.png" alt="">
-    </div>
-    <div class="w-screen h-2/5">
+    </section>
+    <section class="w-screen h-4/5 bg-white overflow-x-auto flex snap-x snap-mandatory">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-2.png" alt="" class="snap-center snap-always">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-1.png" alt="" class="snap-center snap-always">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-3.png" alt="" class="snap-center snap-always">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-4.png" alt="" class="snap-center snap-always">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-5.png" alt="" class="snap-center snap-always">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-6.png" alt="" class="snap-center snap-always">
+        <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-8.png" alt="" class="snap-center snap-always">
+    </section>
+    <section class="w-screen h-2/5">
         <div class="grid grid-cols-3 gap-5 pt-6">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/small-1.png" alt="">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/small-2.png" alt="">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/small-3.png" alt="">
         </div>
-    </div>
+    </section>
+    </main>
 
     <!-- MY CODE ENDS HERE-->
-    
+
 </body>
 </html>
