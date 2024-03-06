@@ -8,40 +8,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="w-screen h-screen bg-white overflow-x-hidden">
 
     <!-- MY CODE STARTS HERE-->
 
-    <header class="w-screen h-28 bg-black text-white fixed top-0 shadow-2xl">
-        <div class="h-full w-96 flex items-center justify-end">
+    <header class="w-screen h-28 xl:bg-black lg:bg-blue-200 md:bg-green-200 sm:bg-pink-200 bg-black text-white fixed top-0 shadow-2xl">
+        <div class="h-full xl:w-96 lg:w-80 md:w-72 sm:w-64 w-56 flex items-center justify-end">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/mercedes-benz-places.svg" alt="" class="h-12 invert">
         </div>
-        <div class="h-full w-2/5 absolute top-0 right-28 text-lg flex justify-evenly items-center">
-            <a href="">Overview</a>
-            <a href="">Residences</a>
-            <a href="#location">Location</a>
-            <a href="">Floor Plans</a>
+        <button id="hmbrgr-btn" class="md:hidden w-12 invert absolute top-8 right-6">
+            <img src="https://paragondigital.com/wp-content/uploads/Menu-Icon2.jpg" alt="">
+        </button>
+        <div class="h-full xl:w-2/5 md:w-3/5 absolute top-0 xl:right-28 md:right-0 text-lg flex justify-evenly items-center ">
+            <a href="" class="hidden md:inline">Overview</a>
+            <a href="" class="hidden md:inline">Residences</a>
+            <a href="#location" class="hidden md:inline">Location</a>
+            <a href="" class="hidden md:inline">Floor Plans</a>
         </div>
+        <div id="dropdown" class="w-screen h-36 bg-black md:hidden relative flex justify-center">
+            <ul class="absolute bottom-0 text-center text-xl grid grid-rows-4 gap-4 mb-4">
+                <li><a href="">Overview</a></li>
+                <li><a href="">Residences</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="">Floor Plans</a></li>
+            </ul>
+        </div>
+        <script src="index.js"></script>
     </header>
-
     <main>
-    <section class="w-screen h-screen bg-cover bg-bottom bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/home-bg.png')]">
-        <div class="w-1/2 h-full text-white grid content-center gap-10 justify-items-center">
-            <p class="font-[Cardo] font-thin text-6xl">Discover Living <br> in Sensual <br> Purity</p>
-            <p class="font-extralight text-2xl">New grounds for extraordinary moments</p>
-            <button class="w-56 h-12 bg-black text-white rounded-md place-self-start ml-40">Register your interest</button>
+    <section class="w-screen h-screen bg-cover bg-bottom md:bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/home-bg.png')] bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/header-mob.png')]">
+        <div class="lg:w-1/2 md:2/3 h-full text-white grid content-center gap-10 lg:justify-items-center">
+            <p class="font-[Cardo] font-thin text-6xl md:hidden lg:inline hidden">Discover Living <br> in Sensual <br> Purity</p>
+            <p class="font-[Cardo] font-thin text-6xl lg:hidden md:inline md:ml-16 hidden">Discover Living in <br> Sensual Purity</p>
+            <p class="font-extralight text-2xl xl:ml-0 md:ml-16 md:inline hidden">New grounds for extraordinary moments</p>
+            <button class="w-56 h-12 bg-black text-white rounded-md place-self-start xl:ml-40 md:ml-16 md:inline hidden">Register your interest</button>
             <div id="location" class="w-2 h-2 absolute bottom-24"></div> <!--Used to get anchor scrolling matched with the actual location section-->
         </div>
     </section>
-    <section class="w-screen h-3/6 grid grid-rows-2 justify-items-center place-items-center">
+    <section class="w-screen h-96 grid grid-rows-2 justify-items-center place-items-center">
         <p class="font-[Cardo] text-5xl">Strategically Located</p>
         <p class="text-center font-extralight text-xl   ">Surrounded by Dubai’s most eminent landmarks, Mercedes-Benz Places <br> 
             offers unobstructed views of the world’s tallest tower, creating an <br> 
             unparalleled living experience.</p>
     </section>
     <section class="w-screen h-screen bg-cover bg-[url('https://manage.tanamiproperties.com/Project/LayoutPlan/1497/Gallery/1527.webp')]"></section>
-    <section class="w-screen h-3/5 bg-white grid grid-rows-2 justify-items-center place-items-center">
+    <section class="w-screen h-96 bg-white grid grid-rows-2 justify-items-center place-items-center">
         <p class="font-[Cardo] text-5xl text-black font-thin text-center">Breaking New Grounds for <br> 
             Intelligent and Luxury Living</p>
             <p class="font-extralight text-xl text-center">The blend of design artistry with the precision of advanced technology <br> 
