@@ -14,17 +14,20 @@
 
     <!-- MY CODE STARTS HERE-->
 
-    <header class="w-screen h-28 xl:bg-black lg:bg-blue-200 md:bg-green-200 sm:bg-pink-200 bg-black text-white fixed top-0 shadow-2xl">
+    <header class="w-screen h-28 bg-black text-white fixed top-0 shadow-2xl">
         <div class="h-full xl:w-96 lg:w-80 md:w-72 sm:w-64 w-56 flex items-center justify-end">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/mercedes-benz-places.svg" alt="" class="h-12 invert">
         </div>
-        <button id="hmbrgr-btn" class="md:hidden w-12 invert absolute top-8 right-6">
+        <button id="hmbrgr-open" class="md:hidden w-12 invert absolute top-8 right-6">
+            <img src="https://paragondigital.com/wp-content/uploads/Menu-Icon2.jpg" alt="">
+        </button>
+        <button id="hmbrgr-close" class="md:hidden w-12 invert absolute top-8 right-6">
             <img src="https://paragondigital.com/wp-content/uploads/Menu-Icon2.jpg" alt="">
         </button>
         <div class="h-full xl:w-2/5 md:w-3/5 absolute top-0 xl:right-28 md:right-0 text-lg flex justify-evenly items-center ">
             <a href="" class="hidden md:inline">Overview</a>
             <a href="" class="hidden md:inline">Residences</a>
-            <a href="#location" class="hidden md:inline">Location</a>
+            <a href="#location" class="hidden md:inline hover:text-zinc-700 transition duration-300 ease-in-out">Location</a>
             <a href="" class="hidden md:inline">Floor Plans</a>
         </div>
         <div id="dropdown" class="w-screen h-36 bg-black md:hidden relative flex justify-center">
@@ -35,7 +38,23 @@
                 <li><a href="">Floor Plans</a></li>
             </ul>
         </div>
-        <script src="index.js"></script>
+        
+        <!--Javascript starts here-->
+        <script>
+            document.getElementById("hmbrgr-open").addEventListener("click", function(){
+            document.getElementById("dropdown").style.display = "flex";
+            document.getElementById("hmbrgr-open").style.display = "none";
+            document.getElementById("hmbrgr-close").style.display = "flex";
+            })
+
+            document.getElementById("hmbrgr-close").addEventListener("click", function(){
+            document.getElementById("dropdown").style.display = "none";
+            document.getElementById("hmbrgr-close").style.display = "none";
+            document.getElementById("hmbrgr-open").style.display = "flex";
+            })
+        </script>
+        <!--Javascript ends here-->
+    
     </header>
     <main>
     <section class="w-screen h-screen bg-cover bg-bottom md:bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/home-bg.png')] bg-[url('https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/header-mob.png')]">
@@ -45,21 +64,32 @@
             <p class="font-extralight text-2xl xl:ml-0 md:ml-16 md:inline hidden">New grounds for extraordinary moments</p>
             <button class="w-56 h-12 bg-black text-white rounded-md place-self-start xl:ml-40 md:ml-16 md:inline hidden">Register your interest</button>
             <div id="location" class="w-2 h-2 absolute bottom-24"></div> <!--Used to get anchor scrolling matched with the actual location section-->
+            <!--Responsive for mobile-->
+            <div class="md:hidden grid grid-rows-3 absolute bottom-0">
+                <p class="font-[Cardo] font-thin text-5xl relative left-4">Discover Living in <br> Sensual Purity</p>
+                <p class="font-extralight text-2xl relative left-4 top-8">New grounds for extraordinary moments</p>
+                <button class="bg-white w-11/12 h-12 text-black font-semibold rounded-lg m-auto">Register your interest</button>
+            </div>
         </div>
     </section>
     <section class="w-screen h-96 grid grid-rows-2 justify-items-center place-items-center">
-        <p class="font-[Cardo] text-5xl">Strategically Located</p>
-        <p class="text-center font-extralight text-xl   ">Surrounded by Dubai’s most eminent landmarks, Mercedes-Benz Places <br> 
+        <p class="font-[Cardo] md:text-5xl text-4xl md:static relative right-12">Strategically Located</p>
+        <p class="md:text-center font-extralight text-xl md:static relative left-5 bottom-20">Surrounded by Dubai’s most eminent landmarks, Mercedes-Benz Places <br> 
             offers unobstructed views of the world’s tallest tower, creating an <br> 
             unparalleled living experience.</p>
     </section>
-    <section class="w-screen h-screen bg-cover bg-[url('https://manage.tanamiproperties.com/Project/LayoutPlan/1497/Gallery/1527.webp')]"></section>
+    <section class="w-screen h-screen bg-cover bg-center bg-[url('https://manage.tanamiproperties.com/Project/LayoutPlan/1497/Gallery/1527.webp')]"></section>
     <section class="w-screen h-96 bg-white grid grid-rows-2 justify-items-center place-items-center">
-        <p class="font-[Cardo] text-5xl text-black font-thin text-center">Breaking New Grounds for <br> 
+        <p class="font-[Cardo] md:text-5xl text-3xl text-black font-thin md:text-center">Breaking New Grounds for <br> 
             Intelligent and Luxury Living</p>
-            <p class="font-extralight text-xl text-center">The blend of design artistry with the precision of advanced technology <br> 
+            <p class="font-extralight text-xl md:text-center md:inline hidden">The blend of design artistry with the precision of advanced technology <br> 
                 creates a harmonious environment where unparalleled customer-centered <br>
                  experience harmonizes with continuous innovation.</p>
+            <p class="md:hidden font-extralight text-xl ml-4">The blend of design artistry with the precision <br>
+                of advanced technology creates a <br>
+                harmonious environment where unparalleled <br> 
+                customer-centered experience harmonizes <br>
+                with continuous innovation.</p>
     </section>
     <section class="w-screen h-4/5 bg-white overflow-x-auto flex snap-x snap-mandatory">
         <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-2.png" alt="" class="snap-center snap-always">
@@ -70,7 +100,7 @@
         <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-6.png" alt="" class="snap-center snap-always">
         <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/banner-8.png" alt="" class="snap-center snap-always">
     </section>
-    <section class="w-screen h-2/5">
+    <section class="w-screen h-2/5 hidden md:flex">
         <div class="grid grid-cols-3 gap-5 pt-6">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/small-1.png" alt="">
             <img src="https://www.dubai.mercedesbenzplaces.com/assets/img/benzplace/interior/small-2.png" alt="">
@@ -80,6 +110,5 @@
     </main>
 
     <!-- MY CODE ENDS HERE-->
-
 </body>
 </html>
